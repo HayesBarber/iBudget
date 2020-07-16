@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.homeController">
+   <children>
+      <AnchorPane fx:id="incomePane" layoutX="26.0" layoutY="30.0" prefHeight="156.0" prefWidth="600.0" styleClass="card" stylesheets="@style.css">
+         <children>
+            <Line endX="100.0" layoutX="80.0" layoutY="115.0" startX="100.0" startY="-74.0" stroke="#725f5f" />
+            <Line endX="100.0" layoutX="320.0" layoutY="115.0" startX="100.0" startY="-74.0" stroke="#725f5f" />
+            <Label layoutX="14.0" layoutY="8.0" text="Income Breakdown" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="114.0" text="Year" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="114.0" text="Month" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="445.0" layoutY="116.0" text="Week" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="yearIncomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="62.0" prefHeight="33.0" prefWidth="173.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthIncomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="62.0" prefHeight="33.0" prefWidth="154.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="weekIncomeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="437.0" layoutY="62.0" prefHeight="33.0" prefWidth="154.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="editIncomeButton" layoutX="561.0" layoutY="128.0" prefHeight="13.0" prefWidth="37.0" styleClass="editButton" stylesheets="@style.css" text="Edit" textFill="#725f5f" underline="true">
+               <font>
+                  <Font size="10.0" />
+               </font></JFXButton>
+            <AnchorPane fx:id="editSalaryPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="156.0" prefWidth="600.0" styleClass="card" stylesheets="@style.css" visible="false">
+               <children>
+                  <JFXTextField fx:id="salaryTextfield" focusColor="#00e676" layoutX="51.0" layoutY="51.0" prefHeight="27.0" prefWidth="498.0" promptText="Enter New Salary" styleClass="loginTextfield" stylesheets="@style.css" unFocusColor="WHITE" />
+                  <JFXButton fx:id="cancelButton" layoutX="229.0" layoutY="105.0" styleClass="editButton" stylesheets="@style.css" text="Cancel" />
+                  <JFXButton fx:id="saveButton" layoutX="310.0" layoutY="105.0" styleClass="editButton" stylesheets="@style.css" text="Save" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="25.0" layoutY="241.0" prefHeight="156.0" prefWidth="600.0" styleClass="card" stylesheets="@style.css">
+         <children>
+            <Line endX="100.0" layoutX="80.0" layoutY="115.0" startX="100.0" startY="-74.0" stroke="#725f5f" />
+            <Line endX="100.0" layoutX="320.0" layoutY="115.0" startX="100.0" startY="-74.0" stroke="#725f5f" />
+            <Label layoutX="14.0" layoutY="8.0" prefHeight="13.0" prefWidth="226.0" text="Income Breakdown (adjusted for taxes)" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="114.0" text="Year" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="114.0" text="Month" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="445.0" layoutY="116.0" text="Week" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="yearIncomeTaxLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="9.0" layoutY="62.0" prefHeight="33.0" prefWidth="154.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthIncomeTaxLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="223.0" layoutY="62.0" prefHeight="33.0" prefWidth="154.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="weekIncomeTaxLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="437.0" layoutY="62.0" prefHeight="33.0" prefWidth="154.0" text="0" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="savingGoalPane" layoutX="26.0" layoutY="455.0" prefHeight="156.0" prefWidth="282.0" styleClass="card" stylesheets="@style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" text="Saving Goal" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="editSaveGoalButton" layoutX="243.0" layoutY="129.0" prefHeight="13.0" prefWidth="37.0" styleClass="editButton" stylesheets="@style.css" text="Edit" textFill="#725f5f" underline="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </JFXButton>
+            <ProgressIndicator fx:id="saveGoalProgressBar" layoutX="123.0" layoutY="27.0" prefHeight="122.0" prefWidth="128.0" progress="0.0" styleClass="green-bar" stylesheets="@style.css" />
+            <Circle fill="#2c2c2c" layoutX="187.0" layoutY="79.0" radius="42.0" stroke="WHITE" strokeWidth="3.0" />
+            <Label fx:id="savingGoalLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="152.0" layoutY="62.0" prefHeight="33.0" prefWidth="70.0" text="15%" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="balanceLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="46.0" prefHeight="33.0" prefWidth="97.0" text="100" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" endY="-5.0" layoutX="-31.0" layoutY="124.0" rotate="90.0" startX="100.0" startY="-69.98231506347656" stroke="#725f5f" />
+            <Label fx:id="goalLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="95.0" prefHeight="33.0" prefWidth="97.0" text="100" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane fx:id="editSaveGoalPane" prefHeight="156.0" prefWidth="282.0" styleClass="card" stylesheets="@style.css" visible="false">
+               <children>
+                  <JFXTextField fx:id="savingGoalTextfield" focusColor="#00e676" layoutX="37.0" layoutY="51.0" prefHeight="27.0" prefWidth="208.0" promptText="Enter Saving Goal" styleClass="loginTextfield" stylesheets="@style.css" unFocusColor="WHITE" />
+                  <JFXButton fx:id="cancelSaveGoalButton" layoutX="75.0" layoutY="97.0" styleClass="editButton" stylesheets="@style.css" text="Cancel" />
+                  <JFXButton fx:id="saveSaveGoalButton" layoutX="146.0" layoutY="97.0" styleClass="editButton" stylesheets="@style.css" text="Save" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="343.0" layoutY="455.0" prefHeight="156.0" prefWidth="282.0" styleClass="card" stylesheets="@style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="8.0" text="About" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="25.0" prefHeight="107.0" prefWidth="260.0" text="iBudget is a personal finance application designed and implemented by Hayes Barber using JavaFX. Uses include spending visualizations, income / expense tracking, and income breakdown.  " textFill="WHITE" wrapText="true" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

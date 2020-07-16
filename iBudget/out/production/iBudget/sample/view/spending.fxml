@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.spendingController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="23.0" prefHeight="290.0" prefWidth="617.0" styleClass="card" stylesheets="@style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Income vs Expenses" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <LineChart fx:id="lineChart" layoutX="19.0" layoutY="37.0" legendVisible="false" prefHeight="223.0" prefWidth="579.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00e676" height="12.0" layoutX="18.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="12.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="12.0" layoutX="80.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="12.0" />
+            <Label layoutX="35.0" layoutY="261.0" text="Income" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="98.0" layoutY="261.0" text="Expense" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="289.0" layoutY="255.0" text="Time" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="-8.0" layoutY="139.0" rotate="270.0" text="Amount ($)" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="17.0" layoutY="336.0" prefHeight="290.0" prefWidth="435.0" styleClass="card" stylesheets="@style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Expense Breakdown" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <PieChart fx:id="pieChart" layoutX="4.0" layoutY="6.0" legendVisible="false" prefHeight="279.0" prefWidth="429.0" stylesheets="@style.css" />
+            <Circle fill="#2c2c2c" layoutX="218.0" layoutY="145.0" radius="73.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label fx:id="amountSpentLabel" alignment="CENTER" layoutX="163.0" layoutY="126.0" prefHeight="27.0" prefWidth="107.0" text="\$10000" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="204.0" layoutY="155.0" text="spent" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="474.0" layoutY="336.0" prefHeight="290.0" prefWidth="162.0" styleClass="card" stylesheets="@style.css">
+         <children>
+            <Label layoutX="19.0" layoutY="16.0" text="Filter" textFill="#725f5f">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <JFXRadioButton fx:id="weekRadio" focusTraversable="false" layoutX="42.0" layoutY="55.0" prefHeight="17.0" prefWidth="68.0" selected="true" text="Week" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="toggleGroup" />
+               </toggleGroup></JFXRadioButton>
+            <JFXRadioButton fx:id="monthRadio" focusTraversable="false" layoutX="42.0" layoutY="110.0" text="Month" textFill="WHITE" toggleGroup="$toggleGroup" />
+            <JFXRadioButton fx:id="yearRadio" focusTraversable="false" layoutX="42.0" layoutY="165.0" text="Year" textFill="WHITE" toggleGroup="$toggleGroup" />
+            <JFXRadioButton fx:id="allTimeRadio" focusTraversable="false" layoutX="42.0" layoutY="220.0" text="All Time" textFill="WHITE" toggleGroup="$toggleGroup" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
